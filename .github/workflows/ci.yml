@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check repository documentation
+        run: |
+          test -f AGENTS.md
+          test -f docs/tz.md
+          test -f docs/roadmap.md
+      # Codex (M0) should extend this workflow to install Node and run lint/typecheck/test/build.

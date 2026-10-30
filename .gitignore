@@ -1,0 +1,39 @@
+# dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.next/
+*.tsbuildinfo
+
+# secrets / local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# local data / dumps / logs
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+backups/
+exports/
+.tmp/
+
+# Supabase local artifacts
+.supabase/
+supabase/.branches/
+supabase/.profiles/
